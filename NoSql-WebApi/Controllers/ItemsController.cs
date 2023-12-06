@@ -16,10 +16,10 @@ namespace NoSql_WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<ItemModel>> GetAll()
         {
-            var items = await _context.ScanAsync<ItemModel>(default).GetRemainingAsync();
-            return Ok(items);
+            return await _context.ScanAsync<ItemModel>(default).GetRemainingAsync();
+            
         }
     }
 }

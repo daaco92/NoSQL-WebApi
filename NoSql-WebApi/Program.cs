@@ -1,4 +1,3 @@
-
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
 
@@ -16,8 +15,9 @@ namespace NoSql_WebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            //builder.Services.AddControllers();
-            builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+
+            var awsOptions = builder.Configuration.GetAWSOptions();
+            builder.Services.AddDefaultAWSOptions(awsOptions);
             builder.Services.AddAWSService<IAmazonDynamoDB>();
             builder.Services.AddScoped<IDynamoDBContext, DynamoDBContext>();
 
