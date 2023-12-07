@@ -5,15 +5,15 @@ namespace NoSql_WebApi.Models.Domain
 
     [DynamoDBTable("Items")]
 
-    public class Items
+    public class Item
     {
-        [DynamoDBHashKey("id")]
+        [DynamoDBHashKey("Id")]
         public int Id { get; set; }
-        [DynamoDBRangeKey("type")]
+        [DynamoDBRangeKey("Type")]
         public string Type { get; set; }
-        [DynamoDBProperty("name")]
+        [DynamoDBProperty("Name")]
         public string Name { get; set; }
-        [DynamoDBProperty("description")]
+        [DynamoDBProperty("Description")]
         public string Description { get; set; }
     }
 }
