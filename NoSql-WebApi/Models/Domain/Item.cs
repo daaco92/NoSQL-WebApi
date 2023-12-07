@@ -7,10 +7,10 @@ namespace NoSql_WebApi.Models.Domain
 
     public class Item
     {
-        [DynamoDBHashKey("Id")]
-        public int Id { get; set; }
-        [DynamoDBRangeKey("Type")]
+        [DynamoDBHashKey("Type")]
         public string Type { get; set; }
+        [DynamoDBRangeKey("Id")]
+        public string Id { get; set; }
         [DynamoDBProperty("Name")]
         public string Name { get; set; }
         [DynamoDBProperty("Description")]
