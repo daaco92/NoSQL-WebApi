@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSql-WebApi", "NoSql-WebApi\NoSql-WebApi.csproj", "{73E1547D-A140-4850-9DA4-E2260F8A29E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E1547D-A140-4850-9DA4-E2260F8A29E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E1547D-A140-4850-9DA4-E2260F8A29E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E1547D-A140-4850-9DA4-E2260F8A29E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E1547D-A140-4850-9DA4-E2260F8A29E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDDA6DCB-EE66-414F-AF62-B32EB6559975}
+	EndGlobalSection
+EndGlobal
