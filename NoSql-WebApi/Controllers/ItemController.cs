@@ -18,8 +18,8 @@ namespace NoSql_WebApi.Controllers
         }
 
 
-        //  TODO:
-        //  [] Get items of a specific type (filter items based on type)
+        // Decide what should be provided and returned, maybe an object of item?
+
 
         // GET: api/item/{type}/{id}
         [HttpGet("{type}/{id}")]
@@ -30,7 +30,7 @@ namespace NoSql_WebApi.Controllers
             return Ok(item);
         }
 
-
+        // The Scan is not recommended. Find better alternatives.
         // GET: api/item
         [HttpGet]
         public async Task<IEnumerable<Item>> GetAllItems()
@@ -39,29 +39,17 @@ namespace NoSql_WebApi.Controllers
             
         }
 
-        // Decide what should be provided and returned, maybe an object of item?
+
+        //  TODO:
+        //  [*] Get items of a specific type (filter items based on type)
 
         // GET: api/item/{string}
         [HttpGet("type")]
         public async Task<IEnumerable<Item>> GetByType(string type)
         {
-            //var opConfig = new DynamoDBOperationConfig();
-            //opConfig.QueryFilter = new List<ScanCondition>
-            //{
-            //    new ScanCondition("Type", ScanOperator.Equal, type)
-            //};
             return await _context.QueryAsync<Item>(type).GetRemainingAsync();
 
         }
-
-        // GET: api/item/{string}
-        //[HttpGet("{type}")]
-        //public async Task<ActionResult<IEnumerable<Item>>> GetItemByType(string type)
-        //{
-        //    var item = await _context.LoadAsync<Item>(type);
-        //    if (item == null) return NotFound();
-        //    return Ok(item);
-        //}
 
         // POST: api/item
         [HttpPost]
