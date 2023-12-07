@@ -7,6 +7,13 @@ namespace NoSql_WebApi
     {
         public static void Main(string[] args)
         {
+
+            //  TODO:
+            //  [*] Full CRUD
+            //  [] possibly use DTO's
+            //  [] Possibly implement repositorie pattern
+            //  [] Possibly make more models/tables
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.

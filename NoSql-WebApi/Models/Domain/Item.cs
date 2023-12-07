@@ -3,13 +3,13 @@
 namespace NoSql_WebApi.Models.Domain
 {
 
-    [DynamoDBTable("items")]
+    [DynamoDBTable("Items")]
 
-    public class ItemModel
+    public class Items
     {
         [DynamoDBHashKey("id")]
         public int Id { get; set; }
-        [DynamoDBProperty("type")]
+        [DynamoDBRangeKey("type")]
         public string Type { get; set; }
         [DynamoDBProperty("name")]
         public string Name { get; set; }
