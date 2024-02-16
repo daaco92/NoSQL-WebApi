@@ -10,7 +10,7 @@ namespace NoSql_WebApi
 
             //  TODO:
             //  [*] Full CRUD
-            //  [] possibly use DTO's
+            //  [] possibly use DTO's 
             //  [] Possibly implement repositorie pattern / services
             //  [] Possibly make more models/tables
 
